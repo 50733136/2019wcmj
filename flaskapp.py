@@ -1865,8 +1865,8 @@ def savePage():
     """save all pages function"""
     page_content = request.form['page_content']
     # when element_format : "html", need to remove the annoying comment to prevent brython exec
-    page_content = [w.replace('// <![CDATA[', '') for w in page_content]
-    page_content = [w.replace('// ]]>', '') for w in page_content]
+    page_content = page_content.replace('// <![CDATA[', '')
+    page_content = page_content.replace('// ]]>', '')
     # check if administrator
     if not isAdmin():
         return redirect("/login")
