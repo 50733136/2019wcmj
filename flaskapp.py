@@ -1876,8 +1876,8 @@ def savePage():
     shutil.copy2(config_dir + "content.htm", config_dir + "content_backup.htm")
     # in Windows client operator, to avoid textarea add extra \n
     # fix list object has no attribute "replace"
-    #page_content = page_content.replace("\n","")
-    page_content =  [w.replace('\n', '') for w in page_content]
+    page_content = page_content.replace("\n","")
+    #page_content =  [w.replace('\n', '') for w in page_content]
     with open(config_dir + "content.htm", "w", encoding="utf-8") as f:
         f.write(page_content)
     return redirect("/edit_page")
