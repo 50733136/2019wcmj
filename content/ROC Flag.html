@@ -136,7 +136,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='game.html'>game</a><ul class='dropdown'><li><a href='game1.html'>game1</a><li><a href='game2.html'>game2</a></li></ul><li><a href='ROC Flag.html'>ROC Flag</a></li>
+                     <li><a href='虛擬主機.html'>虛擬主機</a><li><a href='近端配置與管理.html'>近端配置與管理</a><li><a href='期中報告.html'>期中報告</a><li class='has-children'><a href='game.html'>game</a><ul class='dropdown'><li><a href='game1.html'>game1</a><li><a href='game2.html'>game2</a></li></ul><li><a href='ROC Flag.html'>ROC Flag</a></li>
                       </ul>
                 </nav>
               </div>
@@ -148,6 +148,7 @@ init_mathjax();
           
         </header>
     <div id="tipue_search_content">game2 << <a href='game2.html'>Previous</a> <br /><h1>ROC Flag</h1>
+<p></p>
 <!-- 導入 Brython 標準程式庫 -->
 <script src="./../static/brython.js"></script>
 <script src="./../static/brython_stdlib.js"></script>
@@ -230,10 +231,10 @@ flag_h = canvas.height
 circle_x = flag_w/4
 circle_y = flag_h/4
 # 先畫滿地紅
-ctx.fillStyle='rgb(255, 222, 173)'
+ctx.fillStyle='rgb(255, 240, 245)'
 ctx.fillRect(0,0,flag_w,flag_h)
 # 再畫青天
-ctx.fillStyle='rgb(0, 0, 150)'
+ctx.fillStyle='rgb(224, 255, 255)'
 ctx.fillRect(0,0,flag_w/2,flag_h/2)
 # 畫十二道光芒白日
 ctx.beginPath()
