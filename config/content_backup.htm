@@ -1,5 +1,4 @@
-<h1>虛擬主機</h1>
-<h1>Ubuntu</h1>
+<h1>期末報告</h1><h1>Ubuntu</h1>
 <p>下載ubuntu</p>
 <p><img alt="" height="185" src="/images/chrome_PMBP3eBwev.png" width="450"/></p>
 <p><img alt="" height="156" src="/images/chrome_doSTeKtXhs.png" width="450"/></p>
@@ -393,7 +392,7 @@ ctx.fillRect(0,0,flag_w,flag_h)
 ctx.fillStyle='rgb(0, 0, 150)'
 ctx.fillRect(0,0,flag_w/2,flag_h/2)
 # 畫十二道光芒白日
-ctx.beginPath()
+ctx.beginPath(100)
 star_radius = flag_w/8
 angle = 0
 for i in range(24):
@@ -441,13 +440,13 @@ flag_h = canvas.height
 circle_x = flag_w/4
 circle_y = flag_h/4
 # 先畫滿地紅
-ctx.fillStyle='rgb(255, 240, 245)'
+ctx.fillStyle='rgb(169, 169, 169)'
 ctx.fillRect(0,0,flag_w,flag_h)
 # 再畫青天
-ctx.fillStyle='rgb(224, 255, 255)'
+ctx.fillStyle='rgb(128, 128, 128)'
 ctx.fillRect(0,0,flag_w/2,flag_h/2)
 # 畫十二道光芒白日
-ctx.beginPath()
+ctx.beginPath(0)
 star_radius = flag_w/8
 angle = 0
 for i in range(24):
@@ -468,7 +467,7 @@ ctx.beginPath()
 ctx.arc(circle_x, circle_y, flag_w*17/240, 0, math.pi*2, True)
 ctx.closePath()
 # 填色設為藍色
-ctx.fillStyle = 'rgb(0, 0, 149)'
+ctx.fillStyle = 'rgb(0, 0, 0)'
 ctx.fill()
 # 白日:白心
 ctx.beginPath()
