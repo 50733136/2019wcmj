@@ -1,6 +1,91 @@
-<h1>虎科vpn設定</h1>
+<h1>Share X</h1>
+<p>螢幕截圖:"Ctrl+Print Screen"</p>
+<p>影片錄製開始/結束:"Shift+Print Screen"</p>
+<p><img alt="" height="276" src="/images/ShareX_xtN2mAhEux.png" width="500"/></p>
+<!-- 導入 Brython 標準程式庫 -->
+<script src="/get_page/static/brython.js"></script>
+<script src="/get_page/static/brython_stdlib.js"></script>
+<p></p>
+<!-- 啟動 Brython -->
+<script>
+window.onload=function(){
+// 設定 data/py 為共用程式路徑
+brython({debug:1, pythonpath:['./../data/py']});
+}
+</script>
+<p><canvas height="400" id="plotarea" width="600"></canvas></p>
+<script type="text/python">
+# 導入 doc
+from browser import document as doc
+import math
+ 
+# 準備繪圖畫布
+canvas = doc["plotarea"]
+ctx = canvas.getContext("2d")
+# 進行座標轉換, x 軸不變, y 軸反向且移動 canvas.height 單位光點
+# ctx.setTransform(1, 0, 0, -1, 0, canvas.height)
+# 以下採用 canvas 原始座標繪圖
+flag_w = canvas.width
+flag_h = canvas.height
+circle_x = flag_w/4
+circle_y = flag_h/4
+# 先畫滿地紅
+ctx.fillStyle='rgb(255, 0, 0)'
+ctx.fillRect(0,0,flag_w,flag_h)
+# 再畫青天
+ctx.fillStyle='rgb(0, 0, 150)'
+ctx.fillRect(0,0,flag_w/2,flag_h/2)
+# 畫十二道光芒白日
+ctx.beginPath()
+star_radius = flag_w/8
+angle = 0
+for i in range(24):
+    angle += 5*math.pi*2/12
+    toX = circle_x + math.cos(angle)*star_radius
+    toY = circle_y + math.sin(angle)*star_radius
+    # 只有 i 為 0 時移動到 toX, toY, 其餘都進行 lineTo
+    if (i):
+        ctx.lineTo(toX, toY)
+    else:
+        ctx.moveTo(toX, toY)
+ctx.closePath()
+# 將填色設為白色
+ctx.fillStyle = '#fff'
+ctx.fill()
+# 白日:藍圈
+ctx.beginPath()
+ctx.arc(circle_x, circle_y, flag_w*17/240, 0, math.pi*2, True)
+ctx.closePath()
+# 填色設為藍色
+ctx.fillStyle = 'rgb(0, 0, 149)'
+ctx.fill()
+# 白日:白心
+ctx.beginPath()
+ctx.arc(circle_x, circle_y, flag_w/16, 0, math.pi*2, True)
+ctx.closePath()
+# 填色設為白色
+ctx.fillStyle = '#fff'
+ctx.fill()
+</script><h1>虎科vpn設定</h1>
+<p><span>依作業系統版本下載使用者端程式</span></p>
+<p><span><img alt="" height="121" src="/images/64.png" width="286"/></span></p>
+<p><span>程式下載完成後，點擊兩下開始安裝</span></p>
+<p><span><img caption="false" height="286" src="/images/chrome_0fxclLcWK6.png" width="450"/></span></p>
+<p><span>"點選搜尋" &gt; 輸入程式名稱為Network Connect&gt; 點擊Network Connect</span></p>
+<p><span><img caption="false" height="450" src="/images/chrome_JS4NrhnCv6.png" width="243"/></span></p>
+<p><span>執行程式後，於"登入頁面"輸入網址 : <a href="https://sslvpn.nfu.edu.tw/nfu">https://sslvpn9.twaren.net/nfu</a><span><span> </span>，後按下"執行"</span></span></p>
+<p><span><span><img caption="false" height="319" src="/images/dsNetworkConnect_sVA0qGwmYT.png" width="350"/></span></span></p>
+<p><span><span>輸入使用者帳號密碼</span></span></p>
+<p><span><span><img caption="false" height="319" src="/images/dsNetworkConnect_GFJtBqkB9P.png" width="350"/></span></span></p>
+<p><span><span>螢幕右下角顯示"已連接"，表示已成功連線</span></span></p>
+<p><span><span><img alt="" height="120" src="/images/hNchj6AO35.png" width="120"/></span></span></p>
+<p><span><span>在IE瀏覽器上按下右鍵 使用"以系統管理員身分執行"</span></span></p>
+<p><span><span>登入頁面： <a href="https://sslvpn9.twaren.net/nfu">https://sslvpn9.twaren.net/nfu</a><span>，按下「執行」，會出現帳號與密碼登入欄位</span></span></span></p>
+<p><span><span><img alt="" height="212" src="/images/chrome_jCQlJNbNYZ.png" width="250"/></span></span></p>
+<p><span><span><img alt="" height="432" src="/images/chrome_JR3aHY4RuB.png" width="800"/></span></span></p>
+<p><span><span></span></span></p>
 <h1>期末報告</h1>
-<h1>Ubuntu</h1>
+<p>50733136 廖小萱</p><h1>Ubuntu</h1>
 <p>下載ubuntu</p>
 <p><img alt="" height="185" src="/images/chrome_PMBP3eBwev.png" width="450"/></p>
 <p><img alt="" height="156" src="/images/chrome_doSTeKtXhs.png" width="450"/></p>
